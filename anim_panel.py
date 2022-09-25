@@ -22,10 +22,10 @@ import bpy
 
 class PatazAnimToolz (bpy.types.Panel):
 	bl_idname = 'OBJECT_PT_PatazAnimToolz'
-	bl_label = 'Anim Toolz'
+	bl_label = 'Animation Tools'
 	bl_space_type = 'VIEW_3D'
 	bl_region_type = 'UI'
-	bl_category = 'Pataz'
+	bl_category = 'Animation'
 	
 	@classmethod
 	def poll(cls, context):
@@ -50,7 +50,7 @@ class PatazAnimToolzOperatorPanel (bpy.types.Panel):
 		
 		layout = self.layout
 		row = layout.row()
-		row.label (text = 'Toolz', icon = 'TOOL_SETTINGS')
+		row.label (text = 'Tools', icon = 'TOOL_SETTINGS')
 	
 	def draw(self, context):
 		
@@ -74,7 +74,7 @@ class PatazAnimToolzSettingsPanel (bpy.types.Panel):
 	bl_label = ''
 	bl_space_type = 'VIEW_3D'
 	bl_region_type = 'UI'
-	bl_category = 'Pataz'
+	bl_category = 'Animation'
 	
 	@classmethod
 	def poll(cls, context):
@@ -145,7 +145,7 @@ class PatazAnimToolzLinks (bpy.types.Panel):
 	bl_label = ''
 	bl_space_type = 'VIEW_3D'
 	bl_region_type = 'UI'
-	bl_category = 'Pataz'
+	bl_category = 'Animation'
 	bl_options = {'DEFAULT_CLOSED'}
 	
 	@classmethod
