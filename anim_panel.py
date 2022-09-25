@@ -84,7 +84,7 @@ class PatazAnimToolzSettingsPanel (bpy.types.Panel):
 		
 		layout = self.layout
 		row = layout.row()
-		row.label (text = 'Settingz', icon = 'SETTINGS')
+		row.label (text = 'Settings', icon = 'SETTINGS')
 	
 	def draw(self, context):
 		
@@ -138,40 +138,12 @@ class PatazAnimToolzSettingsPanel (bpy.types.Panel):
 		
 
 
-
-class PatazAnimToolzLinks (bpy.types.Panel):
-	bl_parent_id = 'OBJECT_PT_PatazAnimToolz'
-	bl_idname = 'OBJECT_PT_PatazAnimToolzLinks'
-	bl_label = ''
-	bl_space_type = 'VIEW_3D'
-	bl_region_type = 'UI'
-	bl_category = 'Animation'
-	bl_options = {'DEFAULT_CLOSED'}
-	
-	@classmethod
-	def poll (cls, context):
-		return (context.object is not None)
-	
-	def draw_header(self, context):
-		
-		layout = self.layout
-		row = layout.row()
-		row.label (text = 'Help & Links', icon = 'HEART')
-	
-	def draw(self, context):
-		
-		layout = self.layout
-		
-		row = layout.row()
-		row.operator('wm.url_open', text='Read the Manual', icon = 'HELP').url = 'https://github.com/PatazAnimation/anim-toolz'
-
 # --- REGISTER
 
 classes = (
 	PatazAnimToolz,
 	PatazAnimToolzOperatorPanel,
 	PatazAnimToolzSettingsPanel,
-	PatazAnimToolzLinks
 )
  
 reg_cls, unreg_cls = bpy.utils.register_classes_factory (classes)
